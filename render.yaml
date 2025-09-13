@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: soilgrids-api
+    env: docker
+    plan: free
+    region: oregon   # or "frankfurt" if you want EU servers
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
